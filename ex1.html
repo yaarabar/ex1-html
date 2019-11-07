@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<title>landing page</title>
-	<style>
-	#title {
-		text-align: center;
-	}
-	
-	.card {
-		
-		width: 50%;
-		text-align: center;
-		margin: 20px 10px 40px 30px;
-	}
- 	</style>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://cs.hac.ac.il/design/hadassah-logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>landing page</title>
+    <style>
+        #title {
+            text-align: center;
+        }
 
+        .card p {
+            display: none;
+        }
+
+    </style>
+
+    
+    <script>
+        window.addEventListener("load", function() {
+            const s1 = document.getElementById("s1");
+
+            s1.addEventListener("click", function () {
+                const info = document.getElementById("info1");
+                info.style.display = "block";
+                this.textContent = "less...";
+            });
+        });
+    </script>
 </head>
-
 <body>
 <div id="title">
-	<h2>landing page</h2>
-	<img src="http://cs.hac.ac.il/design/hadassah-logo.png"/>
+    <h2>landing page</h2>
+    <img src="http://cs.hac.ac.il/design/hadassah-logo.png" alt="logo"/>
 </div>
 
-<div class="card">
-  <div class="card-body">
-    <div class="card-title"><strong>course name:</strong> internet programming</div>
-	<div class="card-title"><strong>year:</strong> 2019</div>
-	<div class="card-title"><strong>semester:</strong> A</div>
-	<div class="card-title"><strong>hour:</strong> 8:00</div>
-	<div class="card-title"><strong>location:</strong> Hadassah</div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="card col-12 col-xs-4">
+            <div class="card-body">
+                <div class="card-text"><strong>Course name:</strong> internet programming</div>
+                <div class="card-text"><strong>Year:</strong> 2019</div>
+                <div class="card-text"><strong>Semester:</strong> A</div>
+                <div class="card-text"><strong>Hour:</strong> 8:00</div>
+                <div class="card-text"><strong>Location:</strong> Hadassah</div>
+                <a href="http://cs.hac.ac.il" target="_blank" class="btn btn-primary">Go to Hadassah website</a>
+            </div>
+        </div>
+
+
+        <div class="card col-12 col-xs-4">
+            <div class="card-body">
+                <img class="card-img-top"
+                     src="https://www.pngfind.com/pngs/m/18-182828_shrek-the-third-poster-hd-png-download.png"
+                     alt="Shrek">
+                <div class="card-text"><strong>Student name:</strong> Shrek</div>
+                <div class="card-text"><strong>email:</strong> shrek@hac.ac.il</div>
+                <p id="info1">bla bla bla...</p>
+                <button id="s1" class="btn btn-primary">more...</button>
+            </div>
+        </div>
+
+        <div class="card col-12 col-xs-4">
+            <div class="card-body">
+                <img class="card-img-top"
+                     src="https://i.pinimg.com/originals/20/14/09/201409e38b307f7d45c120eaad7eb33d.png" alt="Feiona">
+                <div class="card-text"><strong>Student name:</strong> Feiona</div>
+                <div class="card-text"><strong>email:</strong> feiona@hac.ac.il</div>
+                <p id="info2">bla bla bla...</p>
+                <button id="s2" class="btn btn-primary">more...</button>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 </body>
